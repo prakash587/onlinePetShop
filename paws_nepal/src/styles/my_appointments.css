@@ -1,0 +1,11 @@
+.my-appointment-item {
+  /* background-color: blueviolet; */
+  transition: all 0.3s ease; /* Add a transition for the transform property */
+  /* transform: translateX(-2%); */
+  opacity: 0.5;
+}
+
+.item-enter-active {
+  /* transform: translateX(0); */
+  opacity: 1;
+}

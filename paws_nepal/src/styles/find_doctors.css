@@ -1,0 +1,12 @@
+/* ProfileCard.css */
+
+.profile-card {
+  transition: all 0.3s ease; /* Add a transition for the transform property */
+  transform: translateX(-5%);
+  opacity: 0.1;
+}
+
+.card-enter-active {
+  transform: translateX(0);
+  opacity: 1;
+}
