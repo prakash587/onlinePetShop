@@ -11,30 +11,30 @@ const WriteReview = ({ id, showWriteReview, close }) => {
   const [rating, setRating] = useState(1);
   const [review, setReview] = useState("");
 
-  const authState = useSelector((state) => {
-    return state.auth;
-  });
+    const authState = useSelector((state) => {
+      return state.auth;
+    });
 
-  const user = authState.user;
-  const token = authState.token;
+    const user = authState.user;
+    const token = authState.token;
 
-  const postReview = async () => {
-    if (!user) {
-      toast.error('Login to give feedbacks.');
-    }
-    else if (review.length === 0) {
-      toast.error("Feedback is empty.");
-    } else {
-      await postFeedback(id, token, rating, review)
-        .then(() => {
-          toast.success("Your feedback has been posted.");
-          close();
-        })
-        .catch((e) => {
-          toast.error(e.message);
-        });
-    }
-  };
+    const postReview = async () => {
+      if (!user) {
+        toast.error('Login to give feedbacks.');
+      }
+      else if (review.length === 0) {
+        toast.error("Feedback is empty.");
+      } else {
+        await postFeedback(id, token, rating, review)
+          .then(() => {
+            toast.success("Your feedback has been posted.");
+            close();
+          })
+          .catch((e) => {
+            toast.error(e.message);
+          });
+      }
+    };
 
   useEffect(() => {
     const observer = new IntersectionObserver(

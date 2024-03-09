@@ -4,6 +4,7 @@ const initialCartState = {
   totalItemCount: 0,
   items: [],
   totalPrice: 0,
+  itemsToReview: [],
 };
 
 const cartSlice = createSlice({
@@ -22,6 +23,7 @@ const cartSlice = createSlice({
         state.totalPrice += action.payload.item.productItem.price;
       } else {
         state.items.push(action.payload.item);
+        state.itemsToReview.push(action.payload.item);
         state.totalItemCount += 1;
         state.totalPrice += action.payload.item.productItem.price;
       }
@@ -38,6 +40,7 @@ const cartSlice = createSlice({
           );
 
           state.items = newStateItems;
+          state.itemsToReview = newStateItems;
         }
         itemToUpdate.count -= 1;
         itemToUpdate.price -= action.payload.item.productItem.price;

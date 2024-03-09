@@ -139,7 +139,7 @@ const PetFoodDetails = () => {
             <p className="text-sm"> {reviews.length} reviews</p>
           </div>
         </div>
-        <div className="flex flex-col w-full items-start">
+        {/* <div className="flex flex-col w-full items-start">
           <div
             onClick={toggleShowWriteReview}
             className="bg-zinc-800 px-4 py-2 rounded-lg cursor-pointer transition-all duration-500 hover:bg-red-600 font-semibold"
@@ -154,7 +154,7 @@ const PetFoodDetails = () => {
               close={toggleShowWriteReview}
             />
           )}
-        </div>
+        </div> */}
       </div>
 
       {/* tabs */}

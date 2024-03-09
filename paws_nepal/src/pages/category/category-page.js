@@ -7,8 +7,8 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useEffect, useRef } from "react";
-import HomePageDetails from "./home-details";
 import { useNavigate, useParams } from "react-router-dom";
+import HomePageDetails from "./home-details";
 
 const Home = () => {
   const navigate = useNavigate();

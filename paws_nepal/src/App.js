@@ -31,6 +31,7 @@ import DoctorForm from "./pages/MedicalHistory/post_checkup_form";
 import Notifications from "./pages/notifications/notifications";
 import Orders from "./pages/orders/orders";
 import Inventories from "./pages/add-inventory/inventories";
+import ReviewItems from "./pages/review-items/review-items";
 
 function App() {
   const dispatch = useDispatch();
@@ -170,6 +171,9 @@ function App() {
               path="/home/:userId/my-cart/check-out"
               element={<CheckOut />}
             ></Route>
+          )}
+          {user && (
+            <Route exact path="/review-items" element={<ReviewItems />}></Route>
           )}
           {user && user.role === "doctor" && (
             <Route

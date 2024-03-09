@@ -28,6 +28,7 @@ const CheckOut = () => {
   });
 
   let items = cartState.items;
+
   let products = items.map((item) => {
     return {
       productId: item.productItem.id,
@@ -87,7 +88,7 @@ const CheckOut = () => {
             navigate("/category/All");
             return;
           } else {
-            await createOrder(token, products, values, totalPrice)
+            await createOrder(token, products, values, totalPrice, items)
               .then(() => {
                 toast.success("Order created successfully");
               })

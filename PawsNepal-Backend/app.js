@@ -13,7 +13,9 @@ app.use(express.json());
 app.use(express.urlencoded({
     extended:true
 }));
+
 app.use("/",routes);
+
 app.use((req,res,next)=>{
     next({
         status:404,
